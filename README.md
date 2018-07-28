@@ -4,10 +4,10 @@ A simple set of functions that demonstrates building a word tree and how to retr
 ## Usage
 ```node index [word]```
 
-### Example 1
+#### Example 1
 ```node index cat```
 
-#### Produces:
+##### Produces:
 ```
 Possible words for: "cat"
 act
@@ -16,10 +16,10 @@ cat
 ta
 ```
 
-### Example 2
+#### Example 2
 ```node index aha```
 
-#### Produces:
+##### Produces:
 ```
 Possible words for: "aha"
 aa
