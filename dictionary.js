@@ -4,7 +4,7 @@
  * Licensing: MIT
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var fs = require("fs");
+const fs = require("fs");
 var dictionary;
 (function (dictionary_1) {
     function fromFile(fileName) {

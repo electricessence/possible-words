@@ -9,6 +9,6 @@ const word = process.argv[process.argv.length-1];
 if(word)
 {
 	console.log(`Possible words for: "${word}"`);
-	for(const w of getPossibleWords(word))
+	for(const w of getPossibleWords(word).sort())
 		console.log(w);
 }

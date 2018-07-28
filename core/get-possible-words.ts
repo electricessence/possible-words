@@ -5,21 +5,47 @@
 
 import {DictionaryTreeNode, WORD_END} from "./tree-from-words";
 
-export function getPossibleWords(
-	root:DictionaryTreeNode,
-	characters:string):string[]
+function getPossibleWordsFromNode(
+	node: DictionaryTreeNode,
+	orderedLookup: ArrayLike<string>,
+	index: number = 0): string[]
 {
-	let results:string[] = [];
-	let node:DictionaryTreeNode = root;
+	let results: string[] = [];
+	const len = orderedLookup.length;
+	let previousChar: string;
+	let char: string;
 
-	for(const letter of characters.split('').sort())
+	for (; index < len; index++)
 	{
-		const n = node[letter];
-		if(!n || Array.isArray(n)) continue;
+		previousChar = char;
+		char = orderedLookup[index];
+		const n = node[char];
+		if (!n) continue; // Invalid? Try the next one.
+
 		const a = n[WORD_END];
-		if(Array.isArray(a) && a.length)
+		if (a && a.length)
 			results = results.concat(a);
-		node = n;
+
+		if (previousChar != char)
+		{
+			// some limited recursion.
+			results = results.concat(
+				getPossibleWordsFromNode(node, orderedLookup, index + 1));
+		}
+
+		node = <DictionaryTreeNode>n;
 	}
+
 	return results;
+}
+
+// noinspection SpellCheckingInspection
+export function getPossibleWords(
+	root: DictionaryTreeNode,
+	characters: string): string[]
+{
+	// category => acegorty
+	// aha => aah
+	return getPossibleWordsFromNode(root,
+		Object.freeze(characters.split('').sort()/*keep immutable just in case*/));
 }
