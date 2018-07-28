@@ -21,7 +21,7 @@ export function treeFromWords(words:string[]):DictionaryTreeNode
 	{
 		if(!word) continue; // Just in case we get an empty blank value.
 		let node = root;
-		for(const letter of word.split('').sort())
+		for(const letter of word.split('').sort()) // sort the lettering so we can leverage alphabetical ordering of the tree.
 		{
 			let n = node[letter];
 			if(!n) node[letter] = n = {};

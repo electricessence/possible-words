@@ -15,7 +15,7 @@ export function getPossibleWords(
 	for(const letter of characters.split('').sort())
 	{
 		const n = node[letter];
-		if(!n || Array.isArray(n)) break;
+		if(!n || Array.isArray(n)) continue;
 		const a = n[WORD_END];
 		if(Array.isArray(a) && a.length)
 			results = results.concat(a);
