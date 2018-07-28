@@ -5,10 +5,8 @@ A simple set of functions that demonstrates building a word tree and how to retr
 ```node index [word]```
 
 #### Example 1
-```node index cat```
-
-Produces:
 ```
+>node index cat
 Possible words for: "cat"
 act
 at
@@ -17,10 +15,8 @@ ta
 ```
 
 #### Example 2
-```node index aha```
-
-Produces:
 ```
+>node index aha
 Possible words for: "aha"
 aa
 aah
@@ -38,3 +34,5 @@ ha
 
 ##### Results in:
 ```words.json```
+
+Which could be used directly instead of recompiling each time.
