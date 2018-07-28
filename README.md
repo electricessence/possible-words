@@ -7,7 +7,7 @@ A simple set of functions that demonstrates building a word tree and how to retr
 #### Example 1
 ```node index cat```
 
-##### Produces:
+Produces:
 ```
 Possible words for: "cat"
 act
@@ -19,7 +19,7 @@ ta
 #### Example 2
 ```node index aha```
 
-##### Produces:
+Produces:
 ```
 Possible words for: "aha"
 aa
