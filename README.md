@@ -2,7 +2,7 @@
 A simple set of functions that demonstrates building a word tree and how to retrieve the possible words.
 
 ## Usage
-````node index [word]```
+```node index [word]```
 
 ### Example
 ```node index cat```
