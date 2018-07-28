@@ -1,0 +1,17 @@
+{
+  "name": "possible-words",
+  "version": "1.0.0",
+  "description": "Returns all possible words of a provided character set from a specified dictionary.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "electricessence",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "@types/node": "^10.5.3"
+  }
+}
